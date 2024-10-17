@@ -9,7 +9,9 @@ body {
 header {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(90deg, #1f4037, #99f2c8); /* Gradient style */
+    background: url('header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
 }
 
 nav {
