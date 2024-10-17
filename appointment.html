@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book an Appointment</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Calendar Appointment Scheduling CSS -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Book an Appointment</h1>
-        <p>Fill in the form below to schedule a meeting with me.</p>
+        <p>Schedule a meeting with me using Google Calendar.</p>
     </header>
     <nav>
         <ul>
@@ -17,27 +19,23 @@
             <li><a href="appointment.html">Book an Appointment</a></li>
         </ul>
     </nav>
-    <main>
-        <section style="text-align: center; padding: 20px;">
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="date">Preferred Date:</label><br>
-                <input type="date" id="date" name="date" required><br><br>
-
-                <label for="time">Preferred Time:</label><br>
-                <input type="time" id="time" name="time" required><br><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4"></textarea><br><br>
-
-                <input type="submit" value="Book Appointment">
-            </form>
-        </section>
+    <main style="text-align: center; padding: 20px;">
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+            (function() {
+                var target = document.currentScript;
+                window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1HzXukChPT5XfVfmEHfOexl2IbwsQyP_LDOiQzxf_7-qbD8dz-6COfQsdWXffj7O6akAo3I2QE?gv=true',
+                        color: '#039BE5',
+                        label: 'Book an appointment',
+                        target,
+                    });
+                });
+            })();
+        </script>
+        <!-- end Google Calendar Appointment Scheduling -->
     </main>
     <footer>
         <p>John © 2024</p>
