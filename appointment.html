@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment</h1>
+        <p>Fill in the form below to schedule a meeting with me.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="appointment.html">Book an Appointment</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section style="text-align: center; padding: 20px;">
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="date">Preferred Date:</label><br>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <label for="time">Preferred Time:</label><br>
+                <input type="time" id="time" name="time" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+                <input type="submit" value="Book Appointment">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>John © 2024</p>
+    </footer>
+</body>
+</html>
