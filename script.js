@@ -41,3 +41,32 @@ window.addEventListener('load', function () {
         body.style.backgroundColor = randomColor;
     });
 });
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+// Scroll Reveal Animations
+ScrollReveal().reveal('header', { 
+    duration: 2000,
+    origin: 'top',
+    distance: '50px'
+});
+
+ScrollReveal().reveal('nav', { 
+    duration: 1500,
+    origin: 'bottom',
+    distance: '30px'
+});
+
+ScrollReveal().reveal('main, footer', { 
+    duration: 2000,
+    origin: 'bottom',
+    distance: '50px',
+    interval: 200
+});
